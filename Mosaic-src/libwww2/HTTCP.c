@@ -72,7 +72,7 @@ PRIVATE char *hostname=0;		/* The name of this host */
 extern int errno;
 #endif /* errno */
 
-extern char *sys_errlist[];		/* see man perror on cernvax */
+//extern char *sys_errlist[];		/* see man perror on cernvax */
 extern int sys_nerr;
 
 /*	Report Internet Error

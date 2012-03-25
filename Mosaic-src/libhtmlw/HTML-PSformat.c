@@ -59,7 +59,12 @@
  *
  */
 #include "../config.h"
+#if 0
 #include <varargs.h>
+#endif
+
+#include <stdarg.h> 
+#include <stdlib.h>
 
 #include <string.h>
 #include <stdio.h>
@@ -229,9 +234,7 @@ GetDpi(HTMLWidget hw)
  *
  */
 static int 
-PSprintf(format, va_alist)
-    char* format;
-    va_dcl
+PSprintf(char *format, ...)
 {
     int 	len;
     char 	*s;
@@ -251,7 +254,7 @@ PSprintf(format, va_alist)
 	}
 	PS_string = s;
     }
-    va_start(args);
+    va_start(args,format);
     len = vsprintf(PS_string+PS_len, format, args);
     /* this is a hack to make it work on systems were vsprintf(s,...)
      * returns s, instead of the len.

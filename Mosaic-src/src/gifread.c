@@ -63,6 +63,7 @@
 #include "../config.h"
 #include <stdio.h>
 #include <X11/Intrinsic.h>
+#include <stdlib.h>
 #include "gifread.h"
 
 /*

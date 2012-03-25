@@ -159,11 +159,24 @@ ReadPNG(FILE *infile,int *width, int *height, XColor *colrs)
     }
 
     /* SWP -- Hopefully to fix cores on bad PNG files */
-    png_set_message_fn(png_ptr,png_get_msg_ptr(png_ptr),NULL,NULL); 
+//    png_set_message_fn(png_ptr,png_get_msg_ptr(png_ptr),NULL,NULL); 
 
         /* initialize the structures */
-    png_info_init(info_ptr);
-    png_read_init(png_ptr);
+  //  png_info_init(info_ptr);
+  //  png_read_init(png_ptr);
+  
+    png_ptr = png_create_read_struct(PNG_LIBPNG_VER_STRING,NULL,NULL,NULL); 
+
+    if (!png_ptr) { 
+        fprintf(stderr,"\n!!! Cannot png_create_read_struct !!!\n");
+    }        
+    
+    info_ptr = png_create_info_struct(png_ptr);
+    
+    if (!info_ptr) {
+            fprintf(stderr,"\n!!! Cannot png_create_info_struct !!!\n");
+    }
+  
     
         /* set up the input control */
     png_init_io(png_ptr, infile);

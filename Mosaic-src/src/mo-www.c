@@ -53,7 +53,19 @@
  ****************************************************************************/
 #include "../config.h"
 #include "mosaic.h"
-#include "comment.h"
+// #include "comment.h"
+
+#define COMMENT_CARD_FILENAME ".mosaic-cc-"
+#define COMMENT_TIME 5
+
+#define MO_COMMENT_OS "Not Supported" /**/
+
+/* Only in the NCSA binaries! */
+#define EASTER
+#define EASTER_ARRAY
+#define EASTER_EXTERNS
+
+
 #include "mo-www.h"
 #include "gui-dialogs.h"
 #include "gui.h"

@@ -164,7 +164,7 @@ int rind(char *s, char c) {
 }
 
 
-int getline(char *s, int n, FILE *f) {
+int mos_getline(char *s, int n, FILE *f) {
     register int i=0;
 
     while(1) {

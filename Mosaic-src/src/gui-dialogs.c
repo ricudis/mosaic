@@ -70,6 +70,8 @@
 
 #include <Xm/Protocols.h>
 
+#include <stdlib.h> 
+
 #include "libhtmlw/HTML.h"
 #include "libnut/system.h"
 #include "libnut/str-tools.h"
@@ -88,7 +90,7 @@ extern int is_uncompressed;
 /*swp -- for ~ expansion*/
 #include <pwd.h>
 extern int sys_nerr;
-extern char *sys_errlist[];
+// extern char *sys_errlist[];
 extern int errno;
 #define __MAX_HOME_LEN__ 256
 int pathEval(char *dest, char *src);

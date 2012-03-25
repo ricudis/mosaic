@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <X11/Xlib.h>
+#include <stdlib.h>
 #include "HTMLP.h"
 #include "HTML.h"
 #include "list.h"

@@ -55,6 +55,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 #ifdef MOTIF
 #include <Xm/Xm.h>
 #include <Xm/Frame.h>

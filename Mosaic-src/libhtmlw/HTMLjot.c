@@ -116,6 +116,8 @@
 #endif /* DEC C, GEC */
 #endif /* VMS, GEC for PGE */
 
+#include <stdlib.h>
+
 #include "HTMLP.h"
 
 typedef struct stroke_rec {

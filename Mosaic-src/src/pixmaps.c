@@ -53,7 +53,18 @@
  ****************************************************************************/
 
 #include "mosaic.h"
-#include "comment.h"
+// #include "comment.h"
+
+#define COMMENT_CARD_FILENAME ".mosaic-cc-"
+#define COMMENT_TIME 5
+
+#define MO_COMMENT_OS "Not Supported" /**/
+
+/* Only in the NCSA binaries! */
+#define EASTER
+#define EASTER_ARRAY
+#define EASTER_EXTERNS
+
 #include "pixmaps.h"
 #include "xpmread.h"
 #include "xpm.h"

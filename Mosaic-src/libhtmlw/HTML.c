@@ -82,6 +82,7 @@
 #define	W_PASSWORD	4
 #define	W_OPTIONMENU	5
 
+#include <stdlib.h>
 
 extern int FormatAll();
 extern int DocumentWidth();
