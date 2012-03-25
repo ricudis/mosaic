@@ -569,11 +569,15 @@ PRIVATE void HTMIME_put_character ARGS2(HTStream *, me, char, c)
               if (www2Trace)
                 fprintf (stderr, "[MIME_put_char] Got content-type value '%s'\n", me->value);
 #endif
-              /* Lowercase it. */
+              /* Lowercase it. While being there, also skip the ;charset part that mosaic is too young to know about*/
               {
                 char *tmp;
-                for (tmp = me->value; *tmp; tmp++)
-                  *tmp = TOLOWER (*tmp);
+                for (tmp = me->value; *tmp; tmp++) { 
+                  if ((*tmp = TOLOWER (*tmp))==';') {
+                    *tmp = '\0' ;
+                    break;
+                  }
+                }
               }
 #ifndef DISABLE_TRACE
               if (www2Trace)
