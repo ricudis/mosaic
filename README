@@ -1,2 +1,9 @@
-Mosaic 2.7b5, look at http://penicuik.lala.gr/~ricudis/Mosaic/ 
+Mosaic 2.7b5, look at http://penicuik.lala.gr/~ricudis/software/Mosaic/ 
 
+Prerequisites : libjpeg-dev, libpng-dev, libxmu-headers, libxpm-dev and libmotif-dev 
+
+Do "make linux". *Do not use configure*, it's broken.
+
+Executable in src/Mozilla. 
+
+Test with src/Mozilla http://www.4chan.org/b/ 
